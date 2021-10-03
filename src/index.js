@@ -10,10 +10,10 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-const element = React.createElement('div', { a: 5, children: 'Привет, мир' });
-console.log(element);
+// const element = React.createElement('div', { a: 5, children: 'Привет, мир' });
+// console.log(element);
 
-ReactDOM.render(element, document.getElementById('root'));
+// ReactDOM.render(element, document.getElementById('root'));
 
 let value = 'click';
 const newBtn = <button type-button>{value}</button>;

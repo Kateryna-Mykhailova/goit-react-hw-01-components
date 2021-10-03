@@ -1,11 +1,11 @@
-export function Profile() {
+export function Statistics({ stats }) {
   return (
     <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+      <h2 class="title">title</h2>
 
       <ul class="stat-list">
         <li class="item">
-          <span class="label">.docx</span>
+          <span class="label">{stats.label}</span>
           <span class="percentage">4%</span>
         </li>
         <li class="item">

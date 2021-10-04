@@ -7,6 +7,7 @@ import statisticalData from './components/Statistics/statistical-data.json';
 import Title from './components/Statistics/Title/Title';
 import { FriendList } from './components/FriendList/FriendList';
 import friends from './components/FriendList/friends.json';
+import { FriendListItem } from './components/FriendListItem/FriendListItem';
 import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
 import transactions from './components/TransactionHistory/transactions.json';
 
@@ -42,10 +43,11 @@ import transactions from './components/TransactionHistory/transactions.json';
 
 const { name, tag, location, avatar, stats } = user;
 // const { id, label, percentage} = statisticalData;
-const arr = friends.map(el => {
-  return el;
-});
-console.log(arr);
+// const arr = friends.map(el => {
+//   return el;
+// });
+// console.log(arr);
+
 function App() {
   return (
     <div className="App">
@@ -63,7 +65,9 @@ function App() {
       </Statistics>
       ;
       <Statistics stats={statisticalData} />;{/* ------------------- */}
-      <FriendList friends={friends} />
+      <FriendList friends={friends}>
+        <FriendListItem friends={friends} />
+      </FriendList>
       {/* --------------- */}
       <TransactionHistory items={transactions} />;
     </div>

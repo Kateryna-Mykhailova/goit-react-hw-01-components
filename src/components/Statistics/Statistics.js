@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 // import { Children } from 'react';
 
 export function Statistics({ title, stats, children }) {
-  console.log(children);
   return (
     <section class="statistics">
       {children}

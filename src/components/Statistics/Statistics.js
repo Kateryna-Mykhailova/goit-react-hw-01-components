@@ -7,11 +7,11 @@ export function Statistics({ title, stats, children }) {
     <section class="statistics">
       {children}
       <ul class="stat-list">
-        {stats.map(element => {
+        {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={element.id} class="item">
-              <span class="label">{element.label}</span>
-              <span class="percentage">{element.percentage}</span>
+            <li key={id} class="item">
+              <span class="label">{label}</span>
+              <span class="percentage">{percentage}</span>
             </li>
           );
         })}

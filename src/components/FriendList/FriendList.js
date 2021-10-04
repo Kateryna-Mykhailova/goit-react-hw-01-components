@@ -1,12 +1,12 @@
 export function FriendList({ friends }) {
   return (
     <ul class="friend-list">
-      {friends.map(friend => {
+      {friends.map(({ id, avatar, name }) => {
         return (
-          <li key={friend.id} class="item">
+          <li key={id} class="item">
             <span class="status"></span>
-            <img class="avatar" src={friend.avatar} alt="" width="48" />
-            <p class="name">{friend.name}</p>
+            <img class="avatar" src={avatar} alt="" width="48" />
+            <p class="name">{name}</p>
           </li>
         );
       })}

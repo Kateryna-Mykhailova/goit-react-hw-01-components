@@ -1,26 +1,34 @@
-export function Statistics({ stats }) {
+import PropTypes from 'prop-types';
+import { Children } from 'react';
+
+export function Statistics({ title, stats, children }) {
+  console.log(children);
   return (
     <section class="statistics">
-      <h2 class="title">title</h2>
-
+      {children}
       <ul class="stat-list">
-        <li class="item">
-          <span class="label">{stats.label}</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
+        {stats.map(element => {
+          return (
+            <li key={element.id} class="item">
+              <span class="label">{element.label}</span>
+              <span class="percentage">{element.percentage}</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
 }
+
+// Statistics.defaultProps = {
+
+// };
+
+// Statistics.PropTypes = {
+//   stats: PropTypes.arrayOf(PropTypes.shape({
+//     id: PropTypes.string,
+//     label: PropTypes.string,
+//     percentage: PropTypes.number
+//   }))
+
+// }

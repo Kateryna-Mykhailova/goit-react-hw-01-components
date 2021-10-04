@@ -7,7 +7,8 @@ import statisticalData from './components/Statistics/statistical-data.json';
 import Title from './components/Statistics/Title/Title';
 import { FriendList } from './components/FriendList/FriendList';
 import friends from './components/FriendList/friends.json';
-import { FriendListItem } from './components/FriendListItem/FriendListItem';
+import { TransactionHistory } from './components/TransactionHistory/TransactionHistory';
+import transactions from './components/TransactionHistory/transactions.json';
 
 // const galleryImg = {
 //   title: "Images",
@@ -63,6 +64,8 @@ function App() {
       ;
       <Statistics stats={statisticalData} />;{/* ------------------- */}
       <FriendList friends={friends} />
+      {/* --------------- */}
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }

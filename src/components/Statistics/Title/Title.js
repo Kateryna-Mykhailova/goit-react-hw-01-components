@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 function Title({ title }) {
   return <h2 class="title">{title}</h2>;
 }

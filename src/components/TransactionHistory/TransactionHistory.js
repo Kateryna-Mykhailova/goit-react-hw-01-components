@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import styles from '../TransactionHistory/TransactionHistory.module.css';
 export function TransactionHistory({ items }) {
   return (
-    <table class="transaction-history">
-      <thead>
-        <tr>
+    <table className={styles.transaction_history}>
+      <thead className={styles.head}>
+        <tr className={styles.head_name}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
@@ -12,7 +13,7 @@ export function TransactionHistory({ items }) {
 
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
+          <tr key={id} className={styles.head_name}>
             <td>{type}</td>
             <td>{amount}</td>
             <td>{currency}</td>
@@ -20,18 +21,6 @@ export function TransactionHistory({ items }) {
         ))}
       </tbody>
     </table>
-
-    // <ul class="friend-list">
-    //   {friends.map(friend => {
-    //     return (
-    //       <li key={friend.id} class="item">
-    //         <span class="status"></span>
-    //         <img class="avatar" src={friend.avatar} alt="" width="48" />
-    //         <p class="name">{friend.name}</p>
-    //       </li>
-    //     );
-    //   })}
-    // </ul>
   );
 }
 

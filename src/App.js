@@ -61,6 +61,7 @@ function App() {
       {/* ------------------- */}
       <Statistics title="Upload stats" stats={statisticalData}>
         <Title title="Upload stats" />
+        {/* {title && <Title title="Upload stats" />} */}
         {/* { title==="Upload stats" && <Title title="Upload stats"/>} */}
       </Statistics>
       ;

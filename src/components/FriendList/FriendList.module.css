@@ -1,0 +1,17 @@
+.friend_list {
+  color: blueviolet;
+}
+
+.status_on {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: chartreuse;
+}
+
+.status_off {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 30, 0);
+}

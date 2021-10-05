@@ -41,7 +41,9 @@ import transactions from './components/TransactionHistory/transactions.json';
 //   }
 // }
 
+import './App.css';
 const { name, tag, location, avatar, stats } = user;
+
 // const { id, label, percentage} = statisticalData;
 // const arr = friends.map(el => {
 //   return el;

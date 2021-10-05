@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export function FriendListItem({ id, avatar, name }) {
   return (
     <li key={id} class="item">
@@ -16,3 +17,14 @@ export function FriendListItem({ id, avatar, name }) {
     //   )}
   );
 }
+
+FriendListItem.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      avatar: PropTypes.string,
+      id: PropTypes.number,
+      isOnline: PropTypes.bool,
+    }),
+  ),
+};

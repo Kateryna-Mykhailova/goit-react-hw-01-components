@@ -41,14 +41,6 @@ export function Statistics({ title, stats }) {
 
 // };
 
-// Statistics.PropTypes = {
-//   stats: PropTypes.arrayOf(PropTypes.shape({
-//     id: PropTypes.string,
-//     label: PropTypes.string,
-//     percentage: PropTypes.number
-//   }))
-
-// }
 Statistics.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({

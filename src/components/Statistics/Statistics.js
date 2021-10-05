@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-// import { Children } from 'react';
+import styles from '../Statistics/Statistics.module.css';
 
 export function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <ul class="stat-list">
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
+      <ul className={styles.stat_list}>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={id} class="item">
-              <span class="label">{label}</span>
-              <span class="percentage">{percentage}</span>
+            <li key={id} className={styles.item}>
+              <span className={styles.label}>{label}</span>
+              <span className={styles.percentage}>{percentage}</span>
             </li>
           );
         })}
@@ -18,28 +18,6 @@ export function Statistics({ title, stats }) {
     </section>
   );
 }
-
-// export function Statistics({ title, stats, children }) {
-//   return (
-//     <section class="statistics">
-//       {children}
-//       <ul class="stat-list">
-//         {stats.map(({ id, label, percentage }) => {
-//           return (
-//             <li key={id} class="item">
-//               <span class="label">{label}</span>
-//               <span class="percentage">{percentage}</span>
-//             </li>
-//           );
-//         })}
-//       </ul>
-//     </section>
-//   );
-// }
-
-// Statistics.defaultProps = {
-
-// };
 
 Statistics.propTypes = {
   title: PropTypes.string,

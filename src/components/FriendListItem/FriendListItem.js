@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from '../FriendList/FriendList.module.css';
 export function FriendListItem({ id, avatar, name, isOnline }) {
   return (
-    <li key={id} class="item">
+    <li key={id} className={styles.friend_item}>
       {isOnline ? (
         <span className={styles.status_on}></span>
       ) : (
